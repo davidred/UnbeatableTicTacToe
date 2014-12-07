@@ -2,7 +2,7 @@ class Board
 
   attr_reader :grid, :winner
 
-  def self.blank_board
+  def self.blank_board # An empty grid
     Array.new(3) { Array.new(3) }
   end
 
@@ -43,13 +43,13 @@ class Board
 
  private
 
- def check_diag
+ def check_diag # Checks if there is a diagonal line
    diag1 = self[[0,0]], self[[1,1]], self[[2,2]]
    diag2 = self[[0,2]], self[[1,1]], self[[2,0]]
    @winner = winning_triple?(diag1) || winning_triple?(diag2)
  end
 
- def check_col
+ def check_col # Checks if there is a vertical line
    3.times do |idx|
      col = []
      @grid.each do |row|
@@ -61,7 +61,7 @@ class Board
    false
  end
 
- def check_row
+ def check_row # Checks if there is a horizontal line
    @grid.each do |row|
      @winner = winning_triple?(row)
      return @winner if @winner
