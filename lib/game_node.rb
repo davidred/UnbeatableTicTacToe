@@ -44,7 +44,7 @@ class TTTNode
         next unless board.empty?(pos)
 
         new_board = board.dup
-        new_board.place_mark(pos, next_mover)
+        new_board.place_mark pos, next_mover
         next_mover = (self.next_mover == :x ? :o : :x)
 
         children << TTTNode.new(new_board, next_mover, pos)
