@@ -10,3 +10,5 @@ Well that doesn't sound fun... but there are 3 play modes:
 3. Navigate to the cloned repo using terminal
 4. Type either ./game.rb OR ruby game.rb
 5. Follow the prompts... Good luck!
+## Badges
+[![Build Status](https://travis-ci.org/Zrp200/UnbeatableTicTacToe.svg?branch=master)](https://travis-ci.org/Zrp200/UnbeatableTicTacToe)
