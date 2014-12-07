@@ -1,19 +1,14 @@
-require_relative 'player'
+require_relative 'player.rb'
 
 class ComputerPlayer < Player
-  def initialize(name)
-    super(name)
-  end
+  def initialize(name); super name; end
 
-  def get_move(game, mark)
-    #go through the board to find empty move
-    pos_moves = possible_moves(game.board) #return array of empty spaces
+  def get_move(game, mark) # Goes through the board to find empty move and returns arry of empty spaces
+    pos_moves = possible_moves(game.board)
     random_move(pos_moves)
   end
 
-  def random_move(possible_moves)
-    possible_moves.sample
-  end
+  def random_move(possible_moves); possible_moves.sample; end
 
   private
 
