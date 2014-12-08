@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
-require 'board'
-require 'player'
-require 'computer_player'
-require 'unbeatable_computer'
-require 'game'
+require_relative '../lib/board'
+require_relative '../lib/player'
+require_relative '../lib/computer_player'
+require_relative '../lib/unbeatable_computer'
+require_relative '../lib/game'
 
 if __FILE__ == $PROGRAM_NAME
   puts "Enter your name"
